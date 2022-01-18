@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/metapasslanding/static/css/main.52d29c04.css",
+    "main.js": "/metapasslanding/static/js/main.4c275b16.js",
+    "static/js/787.8f736652.chunk.js": "/metapasslanding/static/js/787.8f736652.chunk.js",
+    "static/media/ecometapass.svg": "/metapasslanding/static/media/ecometapass.18e7d8060dde3c29ec25b3415f2769fc.svg",
+    "static/media/phone4.svg": "/metapasslanding/static/media/phone4.4af5e393b32a9877cce832c4c874e0f0.svg",
+    "static/media/phone1.svg": "/metapasslanding/static/media/phone1.1badd31e22a67bf65cc537f0d0e03543.svg",
+    "static/media/metapass4.png": "/metapasslanding/static/media/metapass4.119bb513da3bfea7a056.png",
+    "static/media/metapass1.png": "/metapasslanding/static/media/metapass1.00d225f52efd21606b8a.png",
+    "static/media/metapass5.png": "/metapasslanding/static/media/metapass5.49d8f7cf0557f5adbe36.png",
+    "static/media/phone3.svg": "/metapasslanding/static/media/phone3.ad580314224f1901657080542ee3322c.svg",
+    "static/media/phone2.svg": "/metapasslanding/static/media/phone2.f18e99c6deeb19cb5225a5df67748f5e.svg",
+    "static/media/metapass3.png": "/metapasslanding/static/media/metapass3.224dbb0c4ed560f07547.png",
+    "static/media/message.png": "/metapasslanding/static/media/message.d3424ed500dc387e2ef5.png",
+    "static/media/issuer.png": "/metapasslanding/static/media/issuer.647a622532b0c9c3b20b.png",
+    "static/media/helm.png": "/metapasslanding/static/media/helm.8e1003a77a0f1dc5a22b.png",
+    "static/media/googlePlay.png": "/metapasslanding/static/media/googlePlay.a87e618b2bf904af0b21.png",
+    "static/media/trust.svg": "/metapasslanding/static/media/trust.9fa49ef370f81841cac025851cc72475.svg",
+    "static/media/controlIcon.svg": "/metapasslanding/static/media/controlIcon.cd924f4b22d88ee23c38396095e5e01c.svg",
+    "static/media/implementIcon.svg": "/metapasslanding/static/media/implementIcon.afb65fe977f9eb94bf501916d85a660f.svg",
+    "static/media/freeIcon.svg": "/metapasslanding/static/media/freeIcon.76b627b5bb283c36980e6867e6a83296.svg",
+    "static/media/blockIcon.svg": "/metapasslanding/static/media/blockIcon.a1cd2da2e0a2aac6d451414b8bc46389.svg",
+    "static/media/vennIcon.svg": "/metapasslanding/static/media/vennIcon.13b77fdd0a36e2f1341f83ebf129daa7.svg",
+    "static/media/lockIcon.svg": "/metapasslanding/static/media/lockIcon.add42f8c5ad7e2458e5fba5e689a2a8c.svg",
+    "static/media/lockBlack.svg": "/metapasslanding/static/media/lockBlack.0d6b9266a75735cc54766be01394a886.svg",
+    "index.html": "/metapasslanding/index.html",
+    "static/media/data.svg": "/metapasslanding/static/media/data.e11f5e23ef6245708e75592c584a2c80.svg",
+    "static/media/idIcon.svg": "/metapasslanding/static/media/idIcon.da314413396207639d96f5cc896449a0.svg",
+    "main.52d29c04.css.map": "/metapasslanding/static/css/main.52d29c04.css.map",
+    "main.4c275b16.js.map": "/metapasslanding/static/js/main.4c275b16.js.map",
+    "787.8f736652.chunk.js.map": "/metapasslanding/static/js/787.8f736652.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52d29c04.css",
+    "static/js/main.4c275b16.js"
+  ]
+}
