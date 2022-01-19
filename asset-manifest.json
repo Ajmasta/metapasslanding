@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/metapasslanding/static/css/main.23668800.css",
-    "main.js": "/metapasslanding/static/js/main.bf6cfa69.js",
+    "main.js": "/metapasslanding/static/js/main.a2a45aa6.js",
     "static/js/787.8f736652.chunk.js": "/metapasslanding/static/js/787.8f736652.chunk.js",
     "static/media/ecometapass.svg": "/metapasslanding/static/media/ecometapass.18e7d8060dde3c29ec25b3415f2769fc.svg",
     "static/media/moon.svg": "/metapasslanding/static/media/moon.2302439ac3060decb9d5c620419c355f.svg",
@@ -10,6 +10,7 @@
     "static/media/metapass4.png": "/metapasslanding/static/media/metapass4.119bb513da3bfea7a056.png",
     "static/media/metapass1.png": "/metapasslanding/static/media/metapass1.00d225f52efd21606b8a.png",
     "static/media/metapass5.png": "/metapasslanding/static/media/metapass5.49d8f7cf0557f5adbe36.png",
+    "static/media/bluesky.jfif": "/metapasslanding/static/media/bluesky.9935aec81664ae462c18.jfif",
     "static/media/phone3.svg": "/metapasslanding/static/media/phone3.ad580314224f1901657080542ee3322c.svg",
     "static/media/phone2.svg": "/metapasslanding/static/media/phone2.f18e99c6deeb19cb5225a5df67748f5e.svg",
     "static/media/metapass3.png": "/metapasslanding/static/media/metapass3.224dbb0c4ed560f07547.png",
@@ -29,11 +30,11 @@
     "static/media/data.svg": "/metapasslanding/static/media/data.e11f5e23ef6245708e75592c584a2c80.svg",
     "static/media/idIcon.svg": "/metapasslanding/static/media/idIcon.da314413396207639d96f5cc896449a0.svg",
     "main.23668800.css.map": "/metapasslanding/static/css/main.23668800.css.map",
-    "main.bf6cfa69.js.map": "/metapasslanding/static/js/main.bf6cfa69.js.map",
+    "main.a2a45aa6.js.map": "/metapasslanding/static/js/main.a2a45aa6.js.map",
     "787.8f736652.chunk.js.map": "/metapasslanding/static/js/787.8f736652.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.23668800.css",
-    "static/js/main.bf6cfa69.js"
+    "static/js/main.a2a45aa6.js"
   ]
 }
