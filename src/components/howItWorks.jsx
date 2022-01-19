@@ -13,7 +13,7 @@ const BigContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: black;
-  background: linear-gradient(180deg, #121244 0%, #010c31 100%);
+  background: linear-gradient(180deg, #222255 0%, #010c31 100%);
 `;
 const MainContainer = styled.div`
   margin: 0;

@@ -17,13 +17,13 @@ const appearAnimation = keyframes`
 const MainContainer = styled.div`
   margin: 0;
   width: 100%;
+  height: 100vh;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #010c31 0%, #121244 100%);
-  padding-bottom: 100px;
+  background: linear-gradient(180deg, #010c3d 0%, #222255 60%);
 `;
 const InfoBox = styled.div`
   width: 320px;
@@ -36,14 +36,19 @@ const InfoBox = styled.div`
   background-color: #dddddd;
   border-radius: 10px;
   color: black;
-  margin-right: 20px;
-  margin-top: 20px;
+  margin-right: 40px;
+  margin-top: 50px;
+  transition: 0.25s all ease;
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const BoxContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 740px;
 `;
 
 const ImageContainer = styled.div`
@@ -53,8 +58,8 @@ const ImageContainer = styled.div`
 `;
 const TitleContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  width: 50%;
+  justify-content: space-between;
+  width: 70px;
   min-width: 300px;
 `;
 const Title = styled.h2`
@@ -80,7 +85,7 @@ export function EasyToUse() {
           }
         >
           {" "}
-          For Gamers and Web3 users
+          For Users
         </Title>{" "}
         <Title
           onClick={() => setActive("dev")}
@@ -130,6 +135,17 @@ export function EasyToUse() {
               multiple wallets, you can have everything in one place.
             </p>
           </InfoBox>
+          <InfoBox>
+            <ImageContainer>
+              <img src={freeIcon} width={45} />
+            </ImageContainer>
+            <h3 style={{ margin: 0 }}>No gas fees</h3>
+            <p style={{ margin: 0, fontSize: 15 }}>
+              Some authentification solutions require you to mint NFTs or to
+              interact with contracts. DIDs do not require any gas fee and are
+              free to use.
+            </p>
+          </InfoBox>
         </BoxContainer>
       ) : (
         <BoxContainer>
@@ -166,17 +182,6 @@ export function EasyToUse() {
               out an app on another blockchain is a big barrier of entry. As
               DIDs are blockchain agnostic, users can use them to sign up and
               login on any blockchain.
-            </p>
-          </InfoBox>
-          <InfoBox>
-            <ImageContainer>
-              <img src={freeIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}>No gas fees</h3>
-            <p style={{ margin: 0, fontSize: 15 }}>
-              Some authentification solutions require you to mint NFTs or to
-              interact with contracts. DIDs do not require any gas fee and are
-              free to use.
             </p>
           </InfoBox>
         </BoxContainer>

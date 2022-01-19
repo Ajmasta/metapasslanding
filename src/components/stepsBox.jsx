@@ -18,6 +18,7 @@ const MainContainer = styled.div`
   }
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: 30px;
 `;
 const Circle = styled.div`
   border-radius: 3px;

@@ -12,13 +12,13 @@ import metapass1 from "../assets/metapass1.png";
 import metapass3 from "../assets/metapass3.png";
 import metapass4 from "../assets/metapass4.png";
 import metapass5 from "../assets/metapass5.png";
-
+import bluesky from "../assets/bluesky.jfif";
 const appearAnimation = keyframes`
 0% {opacity:0}
 100% {opacity:1}
 `;
 const CanvasContainer = styled.div`
-  height: 567px;
+  height: 80%;
   min-width: 300px;
   margin: 0;
   display: flex;
@@ -65,7 +65,10 @@ const BigContainer = styled.div`
     height: 1100px;
   }
   flex-direction: column;
-  background: linear-gradient(180deg, #010c31 0%, rgba(42, 64, 106, 0.89) 100%);
+
+  background: linear-gradient(180deg, #010c31 0%, rgba(42, 64, 106, 0.69) 100%),
+    url(${bluesky});
+  background-size: cover;
 `;
 const MainTitle = styled.h1`
   font-size: 48px;
@@ -91,6 +94,7 @@ const ImagePicker = styled.div`
 const PickerContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 `;
 export function FirstPanel() {
   const [colorMap, metaMap, aiMap, apeMap] = useLoader(TextureLoader, [

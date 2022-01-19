@@ -9,22 +9,24 @@ import { StepsBox } from "./stepsBox";
 import android from "../assets/googlePlay.png";
 const MainContainer = styled.div`
   width: 100%;
-  height: 700px;
+
   display: flex;
   justify-content: center;
   flex-direction: row;
-
   @media (max-width: 900px) {
     flex-direction: column-reverse;
     height: 800px;
   }
   align-items: center;
 `;
-const PhoneContainer = styled.div``;
+const PhoneContainer = styled.div`
+  height: 100%;
+  width: 100%;
+`;
 const BigContainer = styled.div`
   display: flex;
-  height: 100%;
-  justify-content: center;
+  height: 100vh;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   @media (max-width: 900px) {
@@ -32,7 +34,7 @@ const BigContainer = styled.div`
   }
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, rgba(42, 64, 106, 0.89) 0%, #010c31 100%);
+  background: linear-gradient(180deg, rgba(42, 64, 106, 0.69) 0%, #010c3d 100%);
 `;
 const Image = styled.img`
   width: 120px;
@@ -50,7 +52,7 @@ const Button = styled.button`
   font-size: 16px;
   font-weight: 600;
   &:hover {
-    background-color: #010c31;
+    background-color: rgba(42, 64, 106, 0.69);
     color: white;
   }
 `;
@@ -70,6 +72,7 @@ const RightContainer = styled.div`
 `;
 const LeftContainer = styled.div`
   display: flex;
+  align-items: center;
   height: 100%;
   justify-content: center;
 `;
@@ -86,7 +89,7 @@ const Subtitle = styled.h3`
 const TextContainer = styled.div`
   color: white;
   display: flex;
-
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -111,13 +114,13 @@ export function PhoneTutorial() {
             </Subtitle>
           </TextContainer>
           <StepsBox setImage={setImage} image={image} />
+          <ButtonContainer>
+            <Button>Try it out</Button>
+
+            <Image src={android} />
+          </ButtonContainer>
         </RightContainer>
       </MainContainer>
-      <ButtonContainer>
-        <Button>Try it out</Button>
-
-        <Image src={android} />
-      </ButtonContainer>
     </BigContainer>
   );
 }

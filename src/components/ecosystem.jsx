@@ -10,8 +10,7 @@ const BigContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #010c31 0%, #121212 100%);
-  padding-bottom: 100px;
+  background: linear-gradient(180deg, #010c31 0%, #222255 100%);
 `;
 const MainContainer = styled.div`
   margin: 0;
