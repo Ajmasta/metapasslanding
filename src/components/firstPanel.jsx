@@ -18,7 +18,7 @@ const appearAnimation = keyframes`
 100% {opacity:1}
 `;
 const CanvasContainer = styled.div`
-  height: 550px;
+  height: 567px;
   min-width: 300px;
   margin: 0;
   display: flex;
@@ -46,20 +46,19 @@ const LeftContainer = styled.div`
   margin: 0;
 `;
 const MainContainer = styled.div`
-  padding-top: 130px;
   @media (max-width: 850px) {
     height: 1000px;
   }
-
+  height: 100%;
   display: flex;
   flex-wrap: wrap-reverse;
-  align-items: space-between;
+  align-items: center;
   justify-content: space-between;
   animation: ${appearAnimation} 2s forwards;
 `;
 const BigContainer = styled.div`
   display: flex;
-  height: 700px;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   @media (max-width: 850px) {

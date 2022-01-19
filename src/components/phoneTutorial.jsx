@@ -23,7 +23,7 @@ const MainContainer = styled.div`
 const PhoneContainer = styled.div``;
 const BigContainer = styled.div`
   display: flex;
-  height: 700px;
+  height: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
