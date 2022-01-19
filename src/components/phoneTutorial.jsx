@@ -12,21 +12,20 @@ const MainContainer = styled.div`
   height: 700px;
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
+  flex-direction: row;
+
   @media (max-width: 900px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: 800px;
   }
   align-items: center;
 `;
-const PhoneContainer = styled.div`
-  width: 384px;
-  height: 560px;
-`;
+const PhoneContainer = styled.div``;
 const BigContainer = styled.div`
-  width: 100%;
-  height: 700px;
   display: flex;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   @media (max-width: 900px) {
     height: 800px;
@@ -62,16 +61,57 @@ const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+const LeftContainer = styled.div`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+`;
+const MainTitle = styled.h1`
+  font-size: 48px;
+  max-width: 500px;
+  text-align: center;
+`;
+const Subtitle = styled.h3`
+  font-size: 20px;
+  max-width: 380px;
+  text-align: center;
+`;
+const TextContainer = styled.div`
+  color: white;
+  display: flex;
 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+`;
 export function PhoneTutorial() {
   const [image, setImage] = useState(phone1);
   return (
     <BigContainer>
       <MainContainer>
-        <PhoneContainer>
-          <img src={image} alt="phone tutorial" />
-        </PhoneContainer>
-        <StepsBox setImage={setImage} image={image} />
+        <LeftContainer>
+          <PhoneContainer>
+            <img width={"100%"} src={image} alt="phone tutorial" />
+          </PhoneContainer>
+        </LeftContainer>
+        <RightContainer>
+          <TextContainer>
+            <MainTitle>All of your data in your own hands</MainTitle>
+            <Subtitle>
+              No need to use third parties to profit from your credentials
+              anymore
+            </Subtitle>
+          </TextContainer>
+          <StepsBox setImage={setImage} image={image} />
+        </RightContainer>
       </MainContainer>
       <ButtonContainer>
         <Button>Try it out</Button>

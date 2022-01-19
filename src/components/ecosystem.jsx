@@ -32,7 +32,6 @@ const LeftContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  background: linear-gradient(180deg, #010c31 0%, #121212 100%);
 `;
 const RightContainer = styled.div`
   margin: 0;
@@ -43,7 +42,6 @@ const RightContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: linear-gradient(180deg, #010c31 0%, #121212 100%);
 `;
 const InfoBox = styled.div`
   display: flex;

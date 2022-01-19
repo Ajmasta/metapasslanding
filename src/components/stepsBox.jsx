@@ -8,15 +8,16 @@ import phone3 from "../assets/phone3.svg";
 import phone4 from "../assets/phone4.svg";
 
 const MainContainer = styled.div`
-  height: 100%;
+  height: 150px;
   display: flex;
-  flex-direction: column;
+
+  flex-direction: row;
   @media (max-width: 900px) {
     flex-direction: row;
     flex-wrap: wrap;
   }
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 `;
 const Circle = styled.div`
   border-radius: 3px;
@@ -31,7 +32,7 @@ const Circle = styled.div`
 `;
 const CircleContainer = styled.div`
   height: 30px;
-  width: 60px;
+  width: 33px;
   @media (max-width: 900px) {
     display: none;
   }

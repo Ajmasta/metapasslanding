@@ -25,7 +25,7 @@ export function Earth({ texture, setTexture }) {
         castShadow={true}
       />
 
-      <mesh ref={earthRef} position={[0, 0, 3]} onClick={() => {}}>
+      <mesh ref={earthRef} position={[0, 0, 3.1]} onClick={() => {}}>
         <boxGeometry
           ref={cloudRef}
           args={[1.3, 2, 0.05]}

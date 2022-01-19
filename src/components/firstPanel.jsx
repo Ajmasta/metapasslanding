@@ -18,10 +18,14 @@ const appearAnimation = keyframes`
 100% {opacity:1}
 `;
 const CanvasContainer = styled.div`
-  width: 450px;
-  height: 500px;
+  height: 550px;
   min-width: 300px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 `;
 const TextContainer = styled.div`
   color: white;
@@ -31,21 +35,33 @@ const TextContainer = styled.div`
   align-items: center;
   margin: 0;
 `;
+const LeftContainer = styled.div`
+  display: flex;
+
+  width: 50%;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+`;
 const MainContainer = styled.div`
-  padding-top: 80px;
-  width: 100%;
+  padding-top: 130px;
   @media (max-width: 850px) {
     height: 1000px;
   }
+
   display: flex;
   flex-wrap: wrap-reverse;
-  align-items: center;
-  justify-content: center;
+  align-items: space-between;
+  justify-content: space-between;
   animation: ${appearAnimation} 2s forwards;
 `;
 const BigContainer = styled.div`
   display: flex;
   height: 700px;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 850px) {
     height: 1100px;
   }
@@ -53,8 +69,8 @@ const BigContainer = styled.div`
   background: linear-gradient(180deg, #010c31 0%, rgba(42, 64, 106, 0.89) 100%);
 `;
 const MainTitle = styled.h1`
-  font-size: 36px;
-  max-width: 380px;
+  font-size: 48px;
+  max-width: 500px;
   text-align: center;
 `;
 const Subtitle = styled.h3`
@@ -92,14 +108,16 @@ export function FirstPanel() {
     <Suspense fallback={null}>
       <BigContainer>
         <MainContainer>
-          <TextContainer>
-            <MainTitle>Decentralized Identity for the Metaverse</MainTitle>
-            <Subtitle>
-              Your pass to access all Web3 applications safely and
-              transparently.
-            </Subtitle>
-            <BoxContainer />
-          </TextContainer>
+          <LeftContainer>
+            <TextContainer>
+              <MainTitle>Decentralized Identity for the Metaverse</MainTitle>
+              <Subtitle>
+                Your pass to access all Web3 applications safely and
+                transparently.
+              </Subtitle>
+              <BoxContainer />
+            </TextContainer>
+          </LeftContainer>
           <CanvasContainer>
             <Canvas shadows={true}>
               <Suspense fallback={null}>
