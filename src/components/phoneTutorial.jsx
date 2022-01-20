@@ -102,7 +102,7 @@ export function PhoneTutorial() {
       <MainContainer>
         <LeftContainer>
           <PhoneContainer>
-            <img width={"100%"} src={image} alt="phone tutorial" />
+            <img width={"120%"} src={image} alt="phone tutorial" />
           </PhoneContainer>
         </LeftContainer>
         <RightContainer>
