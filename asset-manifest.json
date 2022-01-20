@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/metapasslanding/static/css/main.23668800.css",
-    "main.js": "/metapasslanding/static/js/main.a2a45aa6.js",
+    "main.js": "/metapasslanding/static/js/main.368ece83.js",
     "static/js/787.8f736652.chunk.js": "/metapasslanding/static/js/787.8f736652.chunk.js",
     "static/media/ecometapass.svg": "/metapasslanding/static/media/ecometapass.18e7d8060dde3c29ec25b3415f2769fc.svg",
     "static/media/moon.svg": "/metapasslanding/static/media/moon.2302439ac3060decb9d5c620419c355f.svg",
@@ -30,11 +30,11 @@
     "static/media/data.svg": "/metapasslanding/static/media/data.e11f5e23ef6245708e75592c584a2c80.svg",
     "static/media/idIcon.svg": "/metapasslanding/static/media/idIcon.da314413396207639d96f5cc896449a0.svg",
     "main.23668800.css.map": "/metapasslanding/static/css/main.23668800.css.map",
-    "main.a2a45aa6.js.map": "/metapasslanding/static/js/main.a2a45aa6.js.map",
+    "main.368ece83.js.map": "/metapasslanding/static/js/main.368ece83.js.map",
     "787.8f736652.chunk.js.map": "/metapasslanding/static/js/787.8f736652.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.23668800.css",
-    "static/js/main.a2a45aa6.js"
+    "static/js/main.368ece83.js"
   ]
 }
