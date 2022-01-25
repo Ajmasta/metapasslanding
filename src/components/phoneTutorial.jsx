@@ -42,14 +42,14 @@ const Image = styled.img`
 `;
 
 const Button = styled.button`
-  width: 100px;
+  width: 150px;
   height: 50px;
   border-radius: 5px;
   border: none;
   background-color: white;
   transition: 0.1s;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 600;
   &:hover {
     background-color: rgba(42, 64, 106, 0.69);
@@ -109,8 +109,7 @@ export function PhoneTutorial() {
           <TextContainer>
             <MainTitle>All of your data in your own hands</MainTitle>
             <Subtitle>
-              No need to use third parties to profit from your credentials
-              anymore
+              Create your Metapass in a few clicks with our app.
             </Subtitle>
           </TextContainer>
           <StepsBox setImage={setImage} image={image} />

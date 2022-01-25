@@ -72,12 +72,12 @@ const BigContainer = styled.div`
 `;
 const MainTitle = styled.h1`
   font-size: 48px;
-  max-width: 500px;
+  max-width: 600px;
   text-align: center;
 `;
 const Subtitle = styled.h3`
   font-size: 20px;
-  max-width: 380px;
+  max-width: 420px;
   text-align: center;
 `;
 
@@ -113,10 +113,12 @@ export function FirstPanel() {
         <MainContainer>
           <LeftContainer>
             <TextContainer>
-              <MainTitle>Decentralized Identity for the Metaverse</MainTitle>
+              <MainTitle>
+                Your Decentralized Identity for the Metaverse
+              </MainTitle>
               <Subtitle>
-                Your pass to access all Web3 applications safely and
-                transparently.
+                Metapass gives gamers ownership and control of their personal
+                data.
               </Subtitle>
               <BoxContainer />
             </TextContainer>

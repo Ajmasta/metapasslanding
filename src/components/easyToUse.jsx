@@ -26,9 +26,8 @@ const MainContainer = styled.div`
   background: linear-gradient(180deg, #010c3d 0%, #222255 60%);
 `;
 const InfoBox = styled.div`
-  width: 320px;
-  max-width: 90%;
-  height: 250px;
+  width: 420px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -42,13 +41,18 @@ const InfoBox = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+  @media (max-width: 900px) {
+    width: 320px;
+    height: 250px;
+  }
 `;
 
 const BoxContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 740px;
+  width: 950px;
+  max-width: 100%;
 `;
 
 const ImageContainer = styled.div`
@@ -70,6 +74,12 @@ const Title = styled.h2`
     cursor: pointer;
   }
 `;
+
+const SubTextContainer = styled.p`
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+`;
 export function EasyToUse() {
   const [active, setActive] = useState("gamer");
   return (
@@ -85,7 +95,7 @@ export function EasyToUse() {
           }
         >
           {" "}
-          For Users
+          For Gamers
         </Title>{" "}
         <Title
           onClick={() => setActive("dev")}
@@ -102,49 +112,46 @@ export function EasyToUse() {
         <BoxContainer style={{ animaton: "appear 1s forwards" }}>
           <InfoBox>
             <ImageContainer>
-              <img src={lockIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}>Secure your assets </h3>
-            <p style={{ margin: 0, fontSize: 15 }}>
-              Using your wallet to sign up and identify yourself can be
-              dangerous. Instead you can simply use a DID. Connecting with a DID
-              feels similar to using a wallet, but it does not put your assets
-              at risk.
-            </p>
-          </InfoBox>
-          <InfoBox>
-            <ImageContainer>
               <img src={controlIcon} width={45} />
             </ImageContainer>
             <h3 style={{ margin: 0 }}> Total control of your data</h3>
-            <p style={{ margin: 0, fontSize: 15 }}>
-              Right now, our online identities depend mostly on centralized
-              third-parties who use and profit from our data. Decentralized
-              identifiers are a new Web3 standard that gives you back authority
-              over your data, and autonomy in the way you manage it.
-            </p>
+            <SubTextContainer>
+              Metapass uses a new decentralized Web3 standard that gives you
+              back authority, privacy, and ownership over your identity and
+              data.
+            </SubTextContainer>
           </InfoBox>
           <InfoBox>
             <ImageContainer>
               <img src={vennIcon} width={45} />
             </ImageContainer>
             <h3 style={{ margin: 0 }}>Everything in one place</h3>
-            <p style={{ margin: 0, fontSize: 15 }}>
-              Decentralized identifiers can work with any Web3 app on any
-              blockchain. Instead of having your information scattered in
-              multiple wallets, you can have everything in one place.
-            </p>
+            <SubTextContainer>
+              Use Metapass with any web3 app on any blockchain. Have all your
+              information in one place instead of scattered across apps and
+              wallets.
+            </SubTextContainer>
+          </InfoBox>
+          <InfoBox>
+            <ImageContainer>
+              <img src={lockIcon} width={45} />
+            </ImageContainer>
+            <h3 style={{ margin: 0 }}>Secure your assets </h3>
+            <SubTextContainer>
+              Metapass keeps your assets safe. Sign up and login with your DID
+              so you don’t have to sign with your wallet anymore.
+            </SubTextContainer>
           </InfoBox>
           <InfoBox>
             <ImageContainer>
               <img src={freeIcon} width={45} />
             </ImageContainer>
             <h3 style={{ margin: 0 }}>No gas fees</h3>
-            <p style={{ margin: 0, fontSize: 15 }}>
-              Some authentification solutions require you to mint NFTs or to
-              interact with contracts. DIDs do not require any gas fee and are
-              free to use.
-            </p>
+            <SubTextContainer>
+              DIDs do not require any gas fee and are free to use whereas
+              traditional authentication solutions sometimes require you to pay
+              fees.
+            </SubTextContainer>
           </InfoBox>
         </BoxContainer>
       ) : (
@@ -154,35 +161,31 @@ export function EasyToUse() {
               <img src={implementIcon} width={45} />
             </ImageContainer>
             <h3 style={{ margin: 0 }}> Easy to implement</h3>
-            <p style={{ margin: 0, fontSize: 15 }}>
-              DID and verifiable credentials can communicate with any Web3 App
-              through JSON Web-Tokens (JWT). JWT are the most common form of
-              authentification so it is easy to seamlessly implement support for
-              DIDs on your app.
-            </p>
+            <SubTextContainer>
+              Implement Metapass to your game’s login in a few minutes and lines
+              of codes. DID and verifiable credentials can communicate with any
+              Web3 App through JSON Web-Tokens (JWT).
+            </SubTextContainer>
           </InfoBox>
           <InfoBox>
             <ImageContainer>
               <img src={idIcon} width={45} />
             </ImageContainer>
             <h3 style={{ margin: 0 }}> Easy authentification</h3>
-            <p style={{ margin: 0, fontSize: 15 }}>
-              Since users are able to send their information with the click of a
-              button, they do not need to answer long forms to signup. Just like
-              when signing up with a wallet, passwords are also unnecessary.
-            </p>
+            <SubTextContainer>
+              Onboard new users in seconds. Login passwords also become
+              obsolete, so you don’t need to store those anymore.
+            </SubTextContainer>
           </InfoBox>
           <InfoBox>
             <ImageContainer>
               <img src={blockIcon} width={45} />
             </ImageContainer>
             <h3 style={{ margin: 0 }}> Works with any blockchain</h3>
-            <p style={{ margin: 0, fontSize: 15 }}>
-              Having your users manage a new wallet everytime they want to try
-              out an app on another blockchain is a big barrier of entry. As
-              DIDs are blockchain agnostic, users can use them to sign up and
-              login on any blockchain.
-            </p>
+            <SubTextContainer>
+              Users can sign up and login to your game from any blockchain and
+              wallet. Make it easy for your users to switch to your blockchain.
+            </SubTextContainer>
           </InfoBox>
         </BoxContainer>
       )}

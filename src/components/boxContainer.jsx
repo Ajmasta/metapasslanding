@@ -3,11 +3,11 @@ import React from "react";
 import lockIcon from "../assets/lockIcon.svg";
 import dataIcon from "../assets/data.svg";
 import trustIcon from "../assets/trust.svg";
-
+import blockIcon from "../assets/blockWhiteIcon.svg";
 const MainContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 320px;
+  width: 420px;
   flex-wrap: wrap;
 `;
 const Container = styled.div`
@@ -42,6 +42,11 @@ export function BoxContainer() {
       <Container>
         <img src={trustIcon} />
         <p>Build trust without oversharing</p>
+      </Container>
+
+      <Container>
+        <img src={blockIcon} width={45} />
+        <p>Works with any blockchain</p>
       </Container>
     </MainContainer>
   );

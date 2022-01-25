@@ -24,7 +24,6 @@ const MainContainer = styled.div`
   justify-content: center;
 
   align-items: center;
-  padding-bottom: 100px;
   flex-wrap: wrap;
 
   @media (min-width: 1000px) {
