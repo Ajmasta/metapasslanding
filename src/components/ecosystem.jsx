@@ -22,7 +22,7 @@ const BigContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #010c31 0%, #222255 100%);
+  background: linear-gradient(180deg, #010c31 0%, #010c31dd 100%);
 `;
 const MainContainer = styled.div`
   margin: 0;
@@ -47,7 +47,6 @@ const LeftContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  background: linear-gradient(180deg, #010c31 0%, #222255 100%);
 `;
 const RightContainer = styled.div`
   margin: 0;
@@ -133,6 +132,16 @@ const InfoTitle = styled.h2`
   font-size: 36px;
   padding-left: 10px;
 `;
+const MainSubtitle = styled.h2`
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+`;
+const MainTitle = styled.h1`
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 10px;
+`;
 const InfoText = styled.h3`
   margin: 0;
   max-width: 80%;
@@ -156,13 +165,16 @@ const ImgContainer = styled.div`
 export function Ecosystem() {
   return (
     <BigContainer>
-      <h1>Become part of an entire ecosystem</h1>
+      <MainTitle>Become part of an entire ecosystem</MainTitle>
+      <MainSubtitle>Powered by our $MTP token</MainSubtitle>
+
       <MainContainer>
         <LeftContainer>
           <MetanalyticsContainer>
             <Label>Q2 2022</Label>
             <div>
               <InfoTitle>Metanalytics</InfoTitle>
+
               <InfoText>
                 Our analytics platform where users monetize their data, and
                 marketers and game developpers direct insights into the market.

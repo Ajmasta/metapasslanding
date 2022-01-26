@@ -155,12 +155,11 @@ export function HowItWorks() {
               <TextContainer>
                 <h3 style={{ marginBottom: 0 }}>Decentralized Identities</h3>
                 <p style={{ fontSize: "17px" }}>
-                  Just like a wallet, decentralized identities (DID) consist of
-                  a public and private key pair. Unlike a wallet, no assets are
-                  directly linked to your DID. Instead, DIDs are created for the
-                  sole purpose of identification. You can use the DID like a
-                  stamp to sign information and prove that it comes from you.
-                  That information is packaged in what is called a verifiable
+                  Unlike a wallet, a DID does not manage tokens. DIDs are
+                  created for the sole purpose of identification and consist of
+                  a public and private key pair. You can use DID like a stamp to
+                  sign information and prove that it comes from you. That
+                  information is packaged in what is called a verifiable
                   credential.
                 </p>
               </TextContainer>
@@ -178,10 +177,10 @@ export function HowItWorks() {
                 <p style={{ fontSize: "17px" }}>
                   Verifiable credentials are the cryptographic and digital
                   version of an ID card. When someone wants to know your age,
-                  you might give them a piece of ID like a driver's licence.
-                  Verifiable credentials are more convenient as they are
-                  modular, you can build them with any info you want, and they
-                  can be transfered easily via the internet.
+                  you typically give them a piece of ID like a driver's licence.
+                  Verifiable credentials are more convenient as they are modular
+                  (you can build them with any info you want) and they can be
+                  transferred easily via the internet.
                 </p>
               </TextContainer>
             </InfoContainer>
@@ -195,13 +194,12 @@ export function HowItWorks() {
               <TextContainer>
                 <h3 style={{ marginBottom: 0 }}>Credentials Issuer</h3>
                 <p style={{ fontSize: "17px" }}>
-                  Some information about yourself has to be verified by a
-                  trusted third-party. For example, you could verify on a
-                  trusted app that you own a wallet. That app would then send
-                  you a verifiable credential acknowledging you as the owner of
-                  that wallet. From then on, you could simply send that
-                  verifiable credential as a proof of ownership. No need for
-                  signing with your wallet anymore.
+                  Trusted third parties can certify that your information is
+                  accurate. For example, you could verify on a trusted app that
+                  you own a given wallet. That app would send you a verifiable
+                  credential acknowledging you as the owner of that wallet. From
+                  then on, you’ll be able to send that verifiable credential as
+                  a proof for others to see you own that wallet.
                 </p>
               </TextContainer>
             </InfoContainer>
