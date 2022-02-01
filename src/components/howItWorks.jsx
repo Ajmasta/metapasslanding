@@ -4,6 +4,8 @@ import helm from "../assets/helm.png";
 import issuer from "../assets/issuer.png";
 import message from "../assets/message.png";
 import moon from "../assets/moon.svg";
+import { useInView } from "react-intersection-observer";
+
 const BigContainer = styled.div`
   margin: 0;
   width: 100%;
@@ -69,7 +71,7 @@ const InfoContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   position: relative;
-
+  border-radius: 15px;
   box-shadow: 1px 1px 6px black;
   margin-right: 20px;
   margin-top: 50px;
@@ -140,10 +142,12 @@ const PanelContainer = styled.div`
   }
 `;
 export function HowItWorks() {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
     <BigContainer>
       <h1 style={{ marginBottom: "" }}>The technology behind it</h1>
-      <MainContainer>
+      <MainContainer ref={ref} className={inView ? "opacity" : ""}>
         <LeftContainer>
           <PanelContainer>
             <NumberContainer>1</NumberContainer>

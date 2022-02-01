@@ -8,25 +8,26 @@ const NavBarContainer = styled.div`
   height: 80px;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
 `;
-const Whitepaper = styled.div`
+const Whitepaper = styled.a`
   width: 150px;
   height: 50px;
   margin-right: 50px;
   color: black;
-  background-color: white;
+  background-color: #eeee;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weigth: 600;
   border-radius: 10px;
+  text-decoration: none !important;
   &:hover {
-    background-color: #222255;
+    background-color: #225588;
     cursor: pointer;
     color: #eee;
   }
@@ -46,14 +47,20 @@ const LogoContainer = styled.div`
 export function NavBar() {
   return (
     <NavBarContainer>
-      <img style={{ marginLeft: "50px" }} src={logo} width={80} />
+      <img style={{ marginLeft: "50px" }} src={logo} height={70} />
 
       <RightContainer>
         <LogoContainer>
           <img src={discord} width={20} />
           <img src={twitter} width={20} />
         </LogoContainer>
-        <Whitepaper>Whitepaper</Whitepaper>
+
+        <Whitepaper
+          target="_blank"
+          href="https://metapass.gitbook.io/api-docs/"
+        >
+          Whitepaper
+        </Whitepaper>
       </RightContainer>
     </NavBarContainer>
   );

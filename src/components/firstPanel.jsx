@@ -82,8 +82,8 @@ const Subtitle = styled.h3`
 `;
 
 const ImagePicker = styled.div`
-  width: 60px;
-  height: 80px;
+  width: 30px;
+  height: 45px;
   cursor: pointer;
   margin-left: 10px;
   border: 1px white solid;
@@ -134,26 +134,26 @@ export function FirstPanel() {
                 style={texture === aiMap ? { boxShadow: "4px 4px 8px" } : {}}
                 onClick={() => setTexture(aiMap)}
               >
-                <img width={"60px"} height={"80px"} src={metapass4} />
+                <img width={"30px"} height={"45px"} src={metapass4} />
               </ImagePicker>
               <ImagePicker
                 style={texture === colorMap ? { boxShadow: "4px 4px 8px" } : {}}
                 onClick={() => setTexture(colorMap)}
               >
-                <img width={"60px"} height={"80px"} src={metapass1} />
+                <img width={"30px"} height={"45px"} src={metapass1} />
               </ImagePicker>
 
               <ImagePicker
                 style={texture === metaMap ? { boxShadow: "4px 4px 8px" } : {}}
                 onClick={() => setTexture(metaMap)}
               >
-                <img width={"60px"} height={"80px"} src={metapass3} />
+                <img width={"30px"} height={"45px"} src={metapass3} />
               </ImagePicker>
               <ImagePicker
                 style={texture === apeMap ? { boxShadow: "2px 2px 8px" } : {}}
                 onClick={() => setTexture(apeMap)}
               >
-                <img width={"60px"} height={"80px"} src={metapass5} />
+                <img width={"30px"} height={"45px"} src={metapass5} />
               </ImagePicker>
             </PickerContainer>
           </CanvasContainer>

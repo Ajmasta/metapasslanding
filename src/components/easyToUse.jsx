@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import lockIcon from "../assets/lockBlack.svg";
+import lockIcon from "../assets/securityIcon.svg";
 import dataIcon from "../assets/data.svg";
 import controlIcon from "../assets/controlIcon.svg";
-import blockIcon from "../assets/blockIcon.svg";
+import blockIcon from "../assets/multipleBlockchain.svg";
 import implementIcon from "../assets/implementIcon.svg";
 import idIcon from "../assets/idIcon.svg";
 import vennIcon from "../assets/vennIcon.svg";
 import freeIcon from "../assets/freeIcon.svg";
 import { keyframes } from "styled-components";
+import { useInView } from "react-intersection-observer";
 
 const appearAnimation = keyframes`
 0% {opacity:0}
@@ -26,15 +27,23 @@ const MainContainer = styled.div`
   background: linear-gradient(180deg, #010c3d 0%, #222255 60%);
 `;
 const InfoBox = styled.div`
-  width: 420px;
-  height: 200px;
+  width: 250px;
+  height: 450px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-left: 10px;
-  background-color: #dddddd;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(
+    95.14% 95.14% at 52.26% 11.67%,
+    #93a1eb 0%,
+    #3853e2 0.01%,
+    #010c31 54.75%,
+    #010c31 100%
+  );
+
   border-radius: 10px;
   color: black;
+  padding: 0 10px;
   margin-right: 40px;
   margin-top: 50px;
   transition: 0.25s all ease;
@@ -51,20 +60,20 @@ const BoxContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 950px;
   max-width: 100%;
 `;
 
 const ImageContainer = styled.div`
-  height: 55px;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 70px;
   min-width: 300px;
+  color: #ffffff;
 `;
 const Title = styled.h2`
   box-sizing: border-box;
@@ -76,12 +85,21 @@ const Title = styled.h2`
 `;
 
 const SubTextContainer = styled.p`
-  font-size: 18px;
+  font-size: 17px;
   color: #000;
-  font-weight: 400;
+  color: #ffffff;
+  min-height: 148px;
+  text-align: center;
+`;
+
+const TitleTextContainer = styled.h3`
+  textalign: center;
+  color: white;
 `;
 export function EasyToUse() {
   const [active, setActive] = useState("gamer");
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
     <MainContainer>
       <h1> Easy to use, easy to implement</h1>
@@ -108,87 +126,97 @@ export function EasyToUse() {
           For Devs
         </Title>
       </TitleContainer>
-      {active === "gamer" ? (
-        <BoxContainer style={{ animaton: "appear 1s forwards" }}>
-          <InfoBox>
-            <ImageContainer>
-              <img src={controlIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}> Total control of your data</h3>
-            <SubTextContainer>
-              Metapass uses a new decentralized Web3 standard that gives you
-              back authority, privacy, and ownership over your identity and
-              data.
-            </SubTextContainer>
-          </InfoBox>
-          <InfoBox>
-            <ImageContainer>
-              <img src={vennIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}>Everything in one place</h3>
-            <SubTextContainer>
-              Use Metapass with any web3 app on any blockchain. Have all your
-              information in one place instead of scattered across apps and
-              wallets.
-            </SubTextContainer>
-          </InfoBox>
-          <InfoBox>
-            <ImageContainer>
-              <img src={lockIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}>Secure your assets </h3>
-            <SubTextContainer>
-              Metapass keeps your assets safe. Sign up and login with your DID
-              so you don’t have to sign with your wallet anymore.
-            </SubTextContainer>
-          </InfoBox>
-          <InfoBox>
-            <ImageContainer>
-              <img src={freeIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}>No gas fees</h3>
-            <SubTextContainer>
-              DIDs do not require any gas fee and are free to use whereas
-              traditional authentication solutions sometimes require you to pay
-              fees.
-            </SubTextContainer>
-          </InfoBox>
-        </BoxContainer>
-      ) : (
-        <BoxContainer>
-          <InfoBox>
-            <ImageContainer>
-              <img src={implementIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}> Easy to implement</h3>
-            <SubTextContainer>
-              Implement Metapass to your game’s login in a few minutes and lines
-              of codes. DID and verifiable credentials can communicate with any
-              Web3 App through JSON Web-Tokens (JWT).
-            </SubTextContainer>
-          </InfoBox>
-          <InfoBox>
-            <ImageContainer>
-              <img src={idIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}> Easy authentification</h3>
-            <SubTextContainer>
-              Onboard new users in seconds. Login passwords also become
-              obsolete, so you don’t need to store those anymore.
-            </SubTextContainer>
-          </InfoBox>
-          <InfoBox>
-            <ImageContainer>
-              <img src={blockIcon} width={45} />
-            </ImageContainer>
-            <h3 style={{ margin: 0 }}> Works with any blockchain</h3>
-            <SubTextContainer>
-              Users can sign up and login to your game from any blockchain and
-              wallet. Make it easy for your users to switch to your blockchain.
-            </SubTextContainer>
-          </InfoBox>
-        </BoxContainer>
-      )}
+      <div ref={ref} className={inView ? "opacity" : ""}>
+        {active === "gamer" ? (
+          <BoxContainer>
+            <InfoBox>
+              <TitleTextContainer>
+                {" "}
+                Total control of your data
+              </TitleTextContainer>
+              <ImageContainer>
+                <img src={controlIcon} width={200} alt="data" />
+              </ImageContainer>
+              <SubTextContainer>
+                Metapass uses a new decentralized Web3 standard that gives you
+                back authority, privacy, and ownership over your identity and
+                data.
+              </SubTextContainer>
+            </InfoBox>
+            <InfoBox>
+              <TitleTextContainer>Everything in one place</TitleTextContainer>
+              <ImageContainer>
+                <img src={vennIcon} width={200} alt="folder" />
+              </ImageContainer>
+              <SubTextContainer>
+                Use Metapass with any web3 app on any blockchain. Have all your
+                information in one place instead of scattered across apps and
+                wallets.
+              </SubTextContainer>
+            </InfoBox>
+            <InfoBox>
+              <TitleTextContainer>Secure your assets </TitleTextContainer>
+              <ImageContainer>
+                <img src={lockIcon} width={200} alt="security" />
+              </ImageContainer>
+              <SubTextContainer>
+                Metapass keeps your assets safe. Sign up and login with your DID
+                so you don’t have to sign with your wallet anymore.
+              </SubTextContainer>
+            </InfoBox>
+            <InfoBox>
+              <TitleTextContainer>No gas fees</TitleTextContainer>
+              <ImageContainer>
+                <img src={freeIcon} width={200} alt="piggyBank" />
+              </ImageContainer>
+              <SubTextContainer>
+                DIDs do not require any gas fee and are free to use whereas
+                traditional authentication solutions sometimes require you to
+                pay fees.
+              </SubTextContainer>
+            </InfoBox>
+          </BoxContainer>
+        ) : (
+          <BoxContainer>
+            <InfoBox>
+              <TitleTextContainer> Easy to implement</TitleTextContainer>
+              <ImageContainer>
+                <img src={implementIcon} width={200} />
+              </ImageContainer>
+              <SubTextContainer>
+                Easily implement Metapass to your app in a few minutes and lines
+                of codes. Metapass uses JSON Web Tokens to communicate with your
+                app.
+              </SubTextContainer>
+            </InfoBox>
+            <InfoBox>
+              <TitleTextContainer> Easy authentification</TitleTextContainer>
+              <ImageContainer>
+                <img src={idIcon} width={200} />
+              </ImageContainer>
+              <SubTextContainer>
+                Onboard new users in seconds as login passwords are unnecessary.
+                Signing messages with a DID is also way safer than with a
+                wallet.
+              </SubTextContainer>
+            </InfoBox>
+            <InfoBox>
+              <TitleTextContainer>
+                {" "}
+                Works with any blockchain
+              </TitleTextContainer>
+              <ImageContainer>
+                <img src={blockIcon} width={200} />
+              </ImageContainer>
+              <SubTextContainer>
+                Users can sign up and login to your game from any blockchain and
+                wallet. Make it easy for your users to switch to your
+                blockchain.
+              </SubTextContainer>
+            </InfoBox>
+          </BoxContainer>
+        )}
+      </div>
     </MainContainer>
   );
 }

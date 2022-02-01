@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Suspense fallback={null}>
+      <Suspense fallback={<div style={{ height: "100vh" }} />}>
         <FirstPanel />
       </Suspense>
       <PhoneTutorial />

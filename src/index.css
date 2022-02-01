@@ -19,6 +19,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.opacity {
+  animation: appear 2s ease;
+}
+.opacityDelayed1 {
+  animation: appear 2.5s ease;
+}
+.opacityDelayed2 {
+  animation: appear 3s ease;
+}
+
 @keyframes appear {
   0% {
     opacity: 0;

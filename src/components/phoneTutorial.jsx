@@ -4,6 +4,7 @@ import phone1 from "../assets/phone1.svg";
 import phone2 from "../assets/phone2.svg";
 import phone3 from "../assets/phone3.svg";
 import phone4 from "../assets/phone4.svg";
+import { useInView } from "react-intersection-observer";
 
 import { StepsBox } from "./stepsBox";
 import android from "../assets/googlePlay.png";
@@ -97,9 +98,10 @@ const TextContainer = styled.div`
 `;
 export function PhoneTutorial() {
   const [image, setImage] = useState(phone1);
+  const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <BigContainer>
-      <MainContainer>
+      <MainContainer ref={ref} className={inView ? "opacity" : ""}>
         <LeftContainer>
           <PhoneContainer>
             <img width={"120%"} src={image} alt="phone tutorial" />

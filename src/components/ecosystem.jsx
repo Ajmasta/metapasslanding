@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import lock from "../assets/lockIcon.svg";
-import ecometa from "../assets/ecometapass.svg";
+
 import snow from "../assets/snow.jpg";
 import sky from "../assets/sky.jpg";
 import data from "../assets/dataTools.svg";
@@ -12,6 +11,7 @@ import guild from "../assets/guild.svg";
 import trophy from "../assets/trophy.svg";
 import match from "../assets/match.svg";
 import content from "../assets/content.svg";
+import { useInView } from "react-intersection-observer";
 
 const BigContainer = styled.div`
   margin: 0;
@@ -156,6 +156,7 @@ const InfoTop = styled.h2`
 const InfoBottom = styled.p`
   margin: 0;
   font-size: 15px;
+  height: 76px;
 `;
 const ImgContainer = styled.div`
   height: 150px;
@@ -163,12 +164,14 @@ const ImgContainer = styled.div`
   align-items: flex-end;
 `;
 export function Ecosystem() {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
     <BigContainer>
       <MainTitle>Become part of an entire ecosystem</MainTitle>
       <MainSubtitle>Powered by our $MTP token</MainSubtitle>
 
-      <MainContainer>
+      <MainContainer ref={ref} className={inView ? "opacity" : ""}>
         <LeftContainer>
           <MetanalyticsContainer>
             <Label>Q2 2022</Label>
@@ -177,7 +180,8 @@ export function Ecosystem() {
 
               <InfoText>
                 Our analytics platform where users monetize their data, and
-                marketers and game developpers direct insights into the market.
+                marketers and game developpers gain direct insights into the
+                market.
               </InfoText>
             </div>
             <InfoBoxesContainer>
@@ -247,9 +251,9 @@ export function Ecosystem() {
                 <ImgContainer>
                   <img src={content} width={150} />
                 </ImgContainer>
-                <InfoTop>Guild Management</InfoTop>
+                <InfoTop>Content Platforms</InfoTop>
                 <InfoBottom>
-                  Establish and manage your guild's meta identity
+                  Share your ideas in forums and game reviews
                 </InfoBottom>
               </InfoContainer>
               <InfoContainer>
@@ -265,9 +269,9 @@ export function Ecosystem() {
                 <ImgContainer>
                   <img src={guild} width={150} height={150} />
                 </ImgContainer>
-                <InfoTop>Personalized Data</InfoTop>
+                <InfoTop>Guild Management</InfoTop>
                 <InfoBottom>
-                  Share your ideas in forums and game reviews
+                  Establish and manage your guild's meta identity
                 </InfoBottom>
               </InfoContainer>
             </InfoBoxesContainer>
