@@ -9,6 +9,7 @@ import { useInView } from "react-intersection-observer";
 const BigContainer = styled.div`
   margin: 0;
   width: 100%;
+
   color: white;
   display: flex;
   flex-direction: column;
@@ -16,6 +17,10 @@ const BigContainer = styled.div`
   align-items: center;
   background-color: black;
   background: linear-gradient(180deg, #222255 0%, #010c31 100%);
+  flex-wrap: wrap;
+  @media (max-width: 900px) {
+    height: 1200px;
+  }
 `;
 const MainContainer = styled.div`
   margin: 0;
@@ -42,12 +47,16 @@ const LeftContainer = styled.div`
   justify-content: center;
 
   align-items: center;
-  padding-bottom: 100px;
+
   flex-wrap: wrap;
 
   @media (min-width: 1000px) {
     flex-direction: column;
     align-items: flex-end;
+    padding-bottom: 100px;
+  }
+  @media (max-width: 900px) {
+    width: 100%;
   }
 `;
 const RightContainer = styled.div`
@@ -55,6 +64,9 @@ const RightContainer = styled.div`
   height: 100%;
   display: flex;
   justify-content: flex-start;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 const InfoContainer = styled.div`
   background: radial-gradient(
@@ -84,6 +96,9 @@ const InfoContainer = styled.div`
     justify-content: flex-start;
     height: 220px;
     padding-right: 30px;
+    margin: 0;
+  }
+  @media (max-width: 900px) {
     margin: 0;
   }
 `;

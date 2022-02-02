@@ -19,6 +19,9 @@ const appearAnimation = keyframes`
 `;
 const CanvasContainer = styled.div`
   height: 80%;
+  @media (max-width: 850px) {
+    height: 600px;
+  }
   min-width: 300px;
   margin: 0;
   display: flex;
@@ -26,6 +29,9 @@ const CanvasContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 const TextContainer = styled.div`
   color: white;
@@ -39,7 +45,9 @@ const LeftContainer = styled.div`
   display: flex;
 
   width: 50%;
-
+  @media (max-width: 900px) {
+    width: 100%;
+  }
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;

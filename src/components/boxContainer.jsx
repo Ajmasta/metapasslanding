@@ -9,6 +9,11 @@ const MainContainer = styled.div`
   justify-content: space-between;
   width: 420px;
   flex-wrap: wrap;
+  align-items: center;
+  @media (max-width: 900px) {
+    width: 300px;
+    justify-content: center;
+  }
 `;
 const Container = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
@@ -21,6 +26,7 @@ const Container = styled.div`
   align-items: center;
   text-align: center;
   padding: 10px 0;
+
   &:hover {
     box-shadow: 2px 1px 6px black;
     cursor: default;

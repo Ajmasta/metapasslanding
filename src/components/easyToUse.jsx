@@ -25,6 +25,10 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, #010c3d 0%, #222255 60%);
+  @media (max-width: 900px) {
+    height: 100%;
+    padding-top: 50px;
+  }
 `;
 const InfoBox = styled.div`
   width: 250px;
@@ -49,10 +53,6 @@ const InfoBox = styled.div`
   transition: 0.25s all ease;
   &:hover {
     transform: scale(1.05);
-  }
-  @media (max-width: 900px) {
-    width: 320px;
-    height: 250px;
   }
 `;
 

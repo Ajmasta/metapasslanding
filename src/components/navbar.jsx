@@ -13,6 +13,9 @@ const NavBarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
+  @media (max-width: 900px) {
+    justify-content: space-between;
+  }
 `;
 const Whitepaper = styled.a`
   width: 150px;
@@ -43,6 +46,9 @@ const LogoContainer = styled.div`
   justify-content: space-around;
   width: 30%;
   cursor: pointer;
+  @media (max-width: 900px) {
+    min-width: 80px;
+  }
 `;
 export function NavBar() {
   return (

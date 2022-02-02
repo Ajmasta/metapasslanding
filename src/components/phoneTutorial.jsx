@@ -15,8 +15,7 @@ const MainContainer = styled.div`
   justify-content: center;
   flex-direction: row;
   @media (max-width: 900px) {
-    flex-direction: column-reverse;
-    height: 800px;
+    flex-direction: column;
   }
   align-items: center;
 `;
@@ -27,21 +26,26 @@ const PhoneContainer = styled.div`
 const BigContainer = styled.div`
   display: flex;
   height: 100vh;
+
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   @media (max-width: 900px) {
-    height: 800px;
+    height: 1200px;
   }
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, rgba(42, 64, 106, 0.69) 0%, #010c3d 100%);
 `;
 const Image = styled.img`
-  width: 120px;
-  height: 60px;
+  width: 120%;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
-
+const ImageAndroid = styled.img`
+  width: 120px;
+`;
 const Button = styled.button`
   width: 150px;
   height: 50px;
@@ -51,7 +55,6 @@ const Button = styled.button`
   transition: 0.1s;
   cursor: pointer;
   font-size: 21px;
-  font-weight: 600;
   &:hover {
     background-color: rgba(42, 64, 106, 0.69);
     color: white;
@@ -96,6 +99,11 @@ const TextContainer = styled.div`
   align-items: center;
   margin: 0;
 `;
+const MobileHidden = styled.div`
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
 export function PhoneTutorial() {
   const [image, setImage] = useState(phone1);
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -104,21 +112,25 @@ export function PhoneTutorial() {
       <MainContainer ref={ref} className={inView ? "opacity" : ""}>
         <LeftContainer>
           <PhoneContainer>
-            <img width={"120%"} src={image} alt="phone tutorial" />
+            <Image src={image} alt="phone tutorial" />
           </PhoneContainer>
         </LeftContainer>
         <RightContainer>
+          <StepsBox setImage={setImage} image={image} />
+
           <TextContainer>
             <MainTitle>All of your data in your own hands</MainTitle>
             <Subtitle>
               Create your Metapass in a few clicks with our app.
             </Subtitle>
           </TextContainer>
-          <StepsBox setImage={setImage} image={image} />
+          <MobileHidden>
+            <StepsBox setImage={setImage} image={image} />
+          </MobileHidden>
           <ButtonContainer>
-            <Button>Try it out</Button>
+            <Button>Coming Soon</Button>
 
-            <Image src={android} />
+            <ImageAndroid src={android} />
           </ButtonContainer>
         </RightContainer>
       </MainContainer>

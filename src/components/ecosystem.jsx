@@ -20,6 +20,7 @@ const BigContainer = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, #010c31 0%, #010c31dd 100%);
@@ -40,13 +41,19 @@ const MainContainer = styled.div`
 const LeftContainer = styled.div`
   margin: 0;
   width: 50%;
+
   min-width: 300px;
   height: 100%;
   color: white;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  @media (max-width: 900px) {
+    width: 100%;
+    align-items: center;
+  }
 `;
 const RightContainer = styled.div`
   margin: 0;
@@ -54,10 +61,15 @@ const RightContainer = styled.div`
   width: 50%;
   height: 100%;
   color: white;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  @media (max-width: 900px) {
+    width: 100%;
+    align-items: center;
+  }
 `;
 const MetanalyticsContainer = styled.div`
   width: 100%;
@@ -75,6 +87,12 @@ const MetanalyticsContainer = styled.div`
   padding: 0 30px;
   color: black;
   position: relative;
+  @media (max-width: 900px) {
+    max-width: 320px;
+    height: 700px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
 `;
 const MetaHubContainer = styled.div`
   width: 100%;
@@ -86,11 +104,16 @@ const MetaHubContainer = styled.div`
   background-size: cover;
   color: black;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   padding: 0 30px;
   color: white;
   position: relative;
+  @media (max-width: 900px) {
+    max-width: 320px;
+    height: 700px;
+  }
 `;
 const Label = styled.div`
   position: absolute;
