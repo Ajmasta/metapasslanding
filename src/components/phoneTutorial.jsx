@@ -104,6 +104,11 @@ const MobileHidden = styled.div`
     display: none;
   }
 `;
+const LargeHidden = styled.div`
+  @media (min-width: 900px) {
+    display: none;
+  }
+`;
 export function PhoneTutorial() {
   const [image, setImage] = useState(phone1);
   const { ref, inView } = useInView({ triggerOnce: true });
@@ -116,8 +121,9 @@ export function PhoneTutorial() {
           </PhoneContainer>
         </LeftContainer>
         <RightContainer>
-          <StepsBox setImage={setImage} image={image} />
-
+          <LargeHidden>
+            <StepsBox setImage={setImage} image={image} />
+          </LargeHidden>
           <TextContainer>
             <MainTitle>All of your data in your own hands</MainTitle>
             <Subtitle>

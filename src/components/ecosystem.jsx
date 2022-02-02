@@ -164,6 +164,7 @@ const MainTitle = styled.h1`
   font-size: 36px;
   margin: 0;
   margin-bottom: 10px;
+  text-align: center;
 `;
 const InfoText = styled.h3`
   margin: 0;

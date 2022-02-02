@@ -15,6 +15,7 @@ const MainContainer = styled.div`
   @media (max-width: 900px) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
   align-items: center;
   justify-content: flex-start;

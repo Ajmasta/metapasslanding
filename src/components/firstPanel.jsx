@@ -20,7 +20,7 @@ const appearAnimation = keyframes`
 const CanvasContainer = styled.div`
   height: 80%;
   @media (max-width: 850px) {
-    height: 600px;
+    max-height: 300px;
   }
   min-width: 300px;
   margin: 0;

@@ -100,6 +100,7 @@ const InfoContainer = styled.div`
   }
   @media (max-width: 900px) {
     margin: 0;
+    margin-top: 50px;
   }
 `;
 const HelmContainer = styled.div`

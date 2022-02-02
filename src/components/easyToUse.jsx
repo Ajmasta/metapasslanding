@@ -82,6 +82,9 @@ const Title = styled.h2`
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
   }
+  @media (max-width: 900px) {
+    align-self: center;
+  }
 `;
 
 const SubTextContainer = styled.p`
@@ -102,7 +105,7 @@ export function EasyToUse() {
 
   return (
     <MainContainer>
-      <h1> Easy to use, easy to implement</h1>
+      <h1 style={{ textAlign: "center" }}> Easy to use, easy to implement</h1>
       <TitleContainer>
         <Title
           onClick={() => setActive("gamer")}
