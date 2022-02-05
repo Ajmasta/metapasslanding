@@ -54,6 +54,9 @@ const InfoBox = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+  @media (max-width: 900px) {
+    margin-right: 0px;
+  }
 `;
 
 const BoxContainer = styled.div`

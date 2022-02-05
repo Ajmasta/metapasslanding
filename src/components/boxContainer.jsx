@@ -11,7 +11,7 @@ const MainContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   @media (max-width: 900px) {
-    width: 300px;
+    width: 250px;
     justify-content: center;
   }
 `;
@@ -30,6 +30,10 @@ const Container = styled.div`
   &:hover {
     box-shadow: 2px 1px 6px black;
     cursor: default;
+  }
+  @media (max-width: 900px) {
+    margin-top: 10px;
+    margin-left: 5px;
   }
 `;
 

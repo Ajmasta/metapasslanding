@@ -34,6 +34,9 @@ const Whitepaper = styled.a`
     cursor: pointer;
     color: #eee;
   }
+  @media (max-width: 900px) {
+    padding: 0 10px;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -48,6 +51,7 @@ const LogoContainer = styled.div`
   cursor: pointer;
   @media (max-width: 900px) {
     min-width: 80px;
+    display: none;
   }
 `;
 export function NavBar() {

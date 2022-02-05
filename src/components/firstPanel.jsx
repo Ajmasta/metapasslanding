@@ -82,6 +82,9 @@ const MainTitle = styled.h1`
   font-size: 48px;
   max-width: 600px;
   text-align: center;
+  @media (max-width: 900px) {
+    font-size: 36px;
+  }
 `;
 const Subtitle = styled.h3`
   font-size: 20px;
